@@ -9,10 +9,20 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var btnNext: UIButton!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func btnNextClicked(_ sender: UIButton) {
+    }
+    
 }

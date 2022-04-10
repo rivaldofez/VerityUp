@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,12 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="VerityUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-YX-yaV">
-                                <rect key="frame" x="0.0" y="55" width="414" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-YX-yaV">
+                                <rect key="frame" x="0.0" y="44" width="390" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IZA-eN-oTR">
                                     <size key="itemSize" width="128" height="128"/>
@@ -39,7 +38,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmX-Fj-s8c">
-                                <rect key="frame" x="132" y="772" width="150" height="50"/>
+                                <rect key="frame" x="120" y="720" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.22113560155567064" green="0.23835909838178285" blue="0.28708964646464652" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Cqq-Tm-Ry1"/>
@@ -50,20 +49,39 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnNextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0A-8h-kBm"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gj7-LZ-LIY">
-                                <rect key="frame" x="149" y="730" width="116" height="26"/>
+                                <rect key="frame" x="138.66666666666666" y="679" width="112.66666666666666" height="25"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.28250591289999999" blue="0.3439168829" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gj7-LZ-LIY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1uu-l3-00o"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zmX-Fj-s8c" secondAttribute="bottom" constant="40" id="9Iy-un-sz8"/>
-                            <constraint firstItem="zmX-Fj-s8c" firstAttribute="top" secondItem="Gj7-LZ-LIY" secondAttribute="bottom" constant="16" id="c2M-N3-oBh"/>
-                            <constraint firstItem="zmX-Fj-s8c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lLQ-Nb-knn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zmX-Fj-s8c" secondAttribute="bottom" constant="40" id="CLZ-qV-hHD"/>
+                            <constraint firstItem="zmX-Fj-s8c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OFs-mL-3zB"/>
+                            <constraint firstItem="zmX-Fj-s8c" firstAttribute="top" secondItem="Gj7-LZ-LIY" secondAttribute="bottom" constant="16" id="TCx-8J-r3U"/>
+                            <constraint firstItem="PG7-YX-yaV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vh6-2F-yO1"/>
+                            <constraint firstItem="Gj7-LZ-LIY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZw-kl-bQf"/>
+                            <constraint firstItem="Gj7-LZ-LIY" firstAttribute="top" secondItem="PG7-YX-yaV" secondAttribute="bottom" id="re7-lX-d9x"/>
+                            <constraint firstItem="PG7-YX-yaV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rpg-hZ-Uvs"/>
+                            <constraint firstItem="PG7-YX-yaV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yji-X4-F7b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnNext" destination="zmX-Fj-s8c" id="lU3-wv-IeF"/>
+                        <outlet property="collectionView" destination="PG7-YX-yaV" id="Ax3-YG-3rl"/>
+                        <outlet property="pageControl" destination="Gj7-LZ-LIY" id="hir-Ut-aZz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,6 +91,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

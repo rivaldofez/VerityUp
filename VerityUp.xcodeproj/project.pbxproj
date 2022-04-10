@@ -13,6 +13,7 @@
 		7E1D3BCD28032C4900BFAD47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1D3BCC28032C4900BFAD47 /* Assets.xcassets */; };
 		7E1D3BD028032C4900BFAD47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1D3BCE28032C4900BFAD47 /* LaunchScreen.storyboard */; };
 		7E1D3BDC2803344900BFAD47 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */; };
+		7E1D3BDF28033BF600BFAD47 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BDE28033BF600BFAD47 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7E1D3BCF28032C4900BFAD47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1D3BD128032C4900BFAD47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7E1D3BDE28033BF600BFAD47 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7E1D3BC228032C4900BFAD47 /* VerityUp */ = {
 			isa = PBXGroup;
 			children = (
+				7E1D3BDD28033BCC00BFAD47 /* Extension */,
 				7E1D3BD92803341800BFAD47 /* CustomViews */,
 				7E1D3BD82803340500BFAD47 /* Views */,
 				7E1D3BD7280333FD00BFAD47 /* Models */,
@@ -97,6 +100,14 @@
 				7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7E1D3BDD28033BCC00BFAD47 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E1D3BDE28033BF600BFAD47 /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			files = (
 				7E1D3BC428032C4900BFAD47 /* AppDelegate.swift in Sources */,
 				7E1D3BC628032C4900BFAD47 /* SceneDelegate.swift in Sources */,
+				7E1D3BDF28033BF600BFAD47 /* UIViewExtension.swift in Sources */,
 				7E1D3BDC2803344900BFAD47 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
