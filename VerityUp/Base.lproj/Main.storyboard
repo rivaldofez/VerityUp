@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-YX-yaV">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-YX-yaV">
                                 <rect key="frame" x="0.0" y="44" width="390" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IZA-eN-oTR">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="IZA-eN-oTR">
                                     <size key="itemSize" width="390" height="608"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnBoardingCollectionViewCell" id="QFd-Uw-cx5" customClass="OnBoardingCollectionViewCell" customModule="VerityUp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="608"/>
+                                        <rect key="frame" x="0.0" y="13.666666666666666" width="390" height="608"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gbf-iC-ydi">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="608"/>
@@ -37,27 +37,35 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wNl-07-gJ0">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="523.66666666666663"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-Qg-bad">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-Qg-bad">
                                                     <rect key="frame" x="16" y="523.66666666666663" width="358" height="68.333333333333371"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Delivery at Your Doorstep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10z-oN-fvi">
-                                                            <rect key="frame" x="34" y="0.0" width="290" height="25.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="25.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="very delicious" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-Yq-r7t">
-                                                            <rect key="frame" x="121" y="45.333333333333371" width="116" height="23"/>
+                                                            <rect key="frame" x="0.0" y="45.333333333333371" width="358" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="10z-oN-fvi" firstAttribute="top" secondItem="wiK-Qg-bad" secondAttribute="top" id="IbM-0T-1nd"/>
+                                                        <constraint firstItem="Ugl-Yq-r7t" firstAttribute="leading" secondItem="wiK-Qg-bad" secondAttribute="leading" id="Ofn-Kn-7Q5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ugl-Yq-r7t" secondAttribute="trailing" id="Su1-xl-N2n"/>
+                                                        <constraint firstItem="10z-oN-fvi" firstAttribute="leading" secondItem="wiK-Qg-bad" secondAttribute="leading" id="Xct-OE-rix"/>
+                                                        <constraint firstAttribute="trailing" secondItem="10z-oN-fvi" secondAttribute="trailing" id="bym-S0-w00"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ugl-Yq-r7t" secondAttribute="bottom" id="zNi-DK-YeD"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wNl-07-gJ0" firstAttribute="leading" secondItem="Gbf-iC-ydi" secondAttribute="leading" id="cou-Mk-exP"/>
-                                                <constraint firstItem="wiK-Qg-bad" firstAttribute="top" secondItem="wNl-07-gJ0" secondAttribute="bottom" id="eBv-jc-TrW"/>
+                                                <constraint firstItem="wiK-Qg-bad" firstAttribute="top" secondItem="wNl-07-gJ0" secondAttribute="bottom" id="f4R-LO-1QA"/>
                                                 <constraint firstItem="wNl-07-gJ0" firstAttribute="top" secondItem="Gbf-iC-ydi" secondAttribute="top" id="iVm-LQ-oEB"/>
                                                 <constraint firstAttribute="trailing" secondItem="wiK-Qg-bad" secondAttribute="trailing" constant="16" id="j6b-2W-m5Q"/>
                                                 <constraint firstItem="wiK-Qg-bad" firstAttribute="leading" secondItem="Gbf-iC-ydi" secondAttribute="leading" constant="16" id="n8L-cs-Vvv"/>
