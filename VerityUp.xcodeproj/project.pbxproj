@@ -15,6 +15,7 @@
 		7E1D3BDC2803344900BFAD47 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */; };
 		7E1D3BDF28033BF600BFAD47 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BDE28033BF600BFAD47 /* UIViewExtension.swift */; };
 		7E1D3BE128033D0000BFAD47 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BE028033D0000BFAD47 /* OnboardingSlide.swift */; };
+		7E1D3BE328033F8C00BFAD47 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D3BE228033F8C00BFAD47 /* OnBoardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7E1D3BDE28033BF600BFAD47 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		7E1D3BE028033D0000BFAD47 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		7E1D3BE228033F8C00BFAD47 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7E1D3BDB2803344900BFAD47 /* OnboardingViewController.swift */,
+				7E1D3BE228033F8C00BFAD47 /* OnBoardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				7E1D3BE128033D0000BFAD47 /* OnboardingSlide.swift in Sources */,
 				7E1D3BC428032C4900BFAD47 /* AppDelegate.swift in Sources */,
 				7E1D3BC628032C4900BFAD47 /* SceneDelegate.swift in Sources */,
+				7E1D3BE328033F8C00BFAD47 /* OnBoardingCollectionViewCell.swift in Sources */,
 				7E1D3BDF28033BF600BFAD47 /* UIViewExtension.swift in Sources */,
 				7E1D3BDC2803344900BFAD47 /* OnboardingViewController.swift in Sources */,
 			);

@@ -21,10 +21,34 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        slides = [
+            OnBoardingSlide(title: "Rivaldo 1", description: "Ini desc 1", image: UIImage(named: "aang.jpg")!),
+            OnBoardingSlide(title: "Rivaldo 2", description: "Ini desc 2", image: UIImage(named: "aang.jpg")!)
+        
+        ]
     }
     
     
     @IBAction func btnNextClicked(_ sender: UIButton) {
+    }
+    
+}
+
+extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return slides.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnBoardingCollectionViewCell.identifier, for: indexPath) as! OnBoardingCollectionViewCell
+        
+        cell.setup(slides[indexPath.row])
+        
+        return cell
     }
     
 }
