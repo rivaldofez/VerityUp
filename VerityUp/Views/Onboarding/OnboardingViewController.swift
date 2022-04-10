@@ -16,6 +16,8 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var slides : [OnBoardingSlide] = []
+    
+    var currentPage = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +28,26 @@ class OnboardingViewController: UIViewController {
         
         slides = [
             OnBoardingSlide(title: "Rivaldo 1", description: "Ini desc 1", image: UIImage(named: "aang.jpg")!),
-            OnBoardingSlide(title: "Rivaldo 2", description: "Ini desc 2", image: UIImage(named: "aang.jpg")!)
+            OnBoardingSlide(title: "Rivaldo 2", description: "Ini desc 2", image: UIImage(named: "aang.jpg")!),
+            OnBoardingSlide(title: "Rivaldo 3", description: "Ini desc 2", image: UIImage(named: "aang.jpg")!)
         
         ]
     }
     
     
     @IBAction func btnNextClicked(_ sender: UIButton) {
+        if(currentPage == slides.count-1){
+            print("Go to next page")
+        }else{
+            currentPage += 1
+        }
+        
+        let indexPath = IndexPath(item: currentPage, section: 0)
+        collectionView.isPagingEnabled = false
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        collectionView.isPagingEnabled = true
+        pageControl.currentPage = currentPage
+        
     }
     
 }
@@ -53,6 +68,19 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        let currentPage = Int(scrollView.contentOffset.x / width)
+        
+        pageControl.currentPage = currentPage
+        
+        if currentPage == slides.count-1 {
+            btnNext.setTitle("Get Started", for: .normal)
+        }else{
+            btnNext.setTitle("Next", for: .normal)
+        }
     }
     
 }
