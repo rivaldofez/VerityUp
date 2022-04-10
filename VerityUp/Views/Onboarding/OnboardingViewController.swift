@@ -14,6 +14,8 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var btnNext: UIButton!
     
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var slides : [OnBoardingSlide] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
